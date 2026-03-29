@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Scroll untuk melihat Animasi</h1>
+    <div class="box">
+ <h2 style="font-size: 25px;">"Demi kemuliaan" - Tigreal</h2>
+    </div>
+       <div class="box">
+        <h2 style="font-size: 25px;">"Aku berlutut Tidak akan" - Alucard</h2>
+    </div>
+       <div class="box">
+        <h2>"Apakah kamu ingin berteman dengan nana" - Nana</h2>
+    </div>
+       <div class="box">
+        <h2>"Keep smiling" - Angela</h2>
+    </div>
+       <div class="box">
+        <h2>"3000 dunia dan tidak ada satu pun lawan yang pantas" - Martis</h2>
+    </div>
+       <div class="box">
+        <h2>"1000 Tahun aku di penjara" - Terizla</h2>
+    </div>
+       <div class="box">
+        <h2>"Aku suka minum susu di pagi hari" - Franco</h2>
+    </div>
+       <div class="box">
+        <h2>"Aku terlahir dengan bakat" - Guinevere</h2>
+    </div>
+       <div class="box">
+        <h2>"Lenyaplah kegelapan" - Alucard</h2>
+    </div>
+       <div class="box">
+        <h2>"HIDUP JOKOWI" - Prabowo</h2>
+    </div>
+       <div class="box">
+        <h2>"huaaaaaa hapuskan seluruh ketidakadilan di dunia ini" - Chou</h2>
+    </div>
+       <div class="box">
+        <h2>"Mereka memanggilku Seorang pahlawan karena aku menyelamatkan dunia aku dari kehancuran" - Yi Shun Shin</h2>
+    </div>
+       <div class="box">
+        <h2>"Satu Tarikan Satu nyawa melayang" - Franco</h2>
+    </div>
+       <div class="box">
+        <h2>"Api membaralah" - Xborg</h2>
+    </div>   
+       <div class="box">
+        <h2>"Kekuatan uang rakyat" -  Minotour</h2>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+        const boxes=document.querySelectorAll('.box');
+        window.addEventListener('scroll',checkBoxes)
+        checkBoxes()
+        function checkBoxes(){
+        const triggerButton =window.innerHeight /5*4
+        boxes.forEach(box =>{
+        const boxTop =box.getBoundingClientRect().top
+        if(boxTop < triggerButton){
+        box.classList.add('show');
+        }else{
+        box.classList.remove('show');
+        }
+        }) 
+        }
+
+    </script>
+
+</body>
+</html>

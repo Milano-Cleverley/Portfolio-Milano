@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.utama{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url(img/img1.jpg) ;
+    background-size: cover;
+}
+.bks-utama{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.566);
+    border-radius: 10px;
+}
+.kotak1{
+    width: 75%;
+    height: 65vh;
+}
+.kotak1 input{
+    margin-top: 20px;
+}
+.kotak1 button{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.566);
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.kotak1 button:hover{
+    scale:1.2;    
+    transition: 0.5s ease-in-out;
+
+}
+.output{
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.566);
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    font-size: 20px;
+}
+@media(max-width:667px){
+    .bks-utama{
+      width: 95%; 
+    }
+    .utama{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+   .kotak1 label{
+    font-size: 12px;
+   }
+   .output{
+    font-size: 12px;
+   }
+}

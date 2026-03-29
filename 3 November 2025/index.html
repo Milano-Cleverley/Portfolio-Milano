@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="utama">
+<div class="bks-utama">
+     <div class="kotak1">
+        <h1>Password Generator</h1><br>
+    <label for="">Password Length : </label><br>
+    <input style="background-color: rgba(255,255,255,0.566); padding: 10px;border-radius: 10px;" type="number" id="len" value="12" min="6"><br>
+    <label for="">Include Uppercase</label>
+    <input style="margin-right: 150px;" type="checkbox" id="upper" checked><br>
+       <label for="">Include Number</label>
+    <input style="margin-right: 165px;"  type="checkbox" id="nums" checked><br>
+       <label for="">Include Character</label>
+    <input style="margin-right: 160px;"  type="checkbox" id="special" checked><br>
+
+    <button onclick="generate()">Generate Password</button>
+    <button onclick="reset()">Reset</button>
+    <div class="output" id="passOut">Your Password Show Here!</div>
+
+     </div>
+</div>
+   </div>
+    <script>
+    function genPass(len,upper,nums,special){
+        const lower = "abcdefghijklmnopqrstuvwxyz";
+        const upperChars ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const numChars ="0123456789";
+        const specialChars ="!@#$%^&*()+-_:;[]{}?=><|\/~";
+        let chars = lower;
+
+        if(upper)chars += upperChars;
+        if(nums)chars  += numChars;
+        if(special)chars += specialChars;
+        let pass=""
+        for(let i = 0; i<len;i++){
+            const randInt = Math.floor(Math.random() *chars.length);
+            pass+=chars[randInt];
+        }
+        return pass;
+
+    }
+    function generate(){
+        const len =parseInt(document.getElementById("len").value);
+        const upper =document.getElementById("upper").checked;
+        const nums = document.getElementById("nums").checked;
+        const special = document.getElementById("special").checked;
+        if(len<6){
+        window.alert('Password tidak kuat')
+        return;
+        }if(len>12){
+            window.alert('Password Susah di Ingat')
+            return;
+        }
+
+        const pass = genPass(len,upper,nums,special);
+        document.getElementById("passOut").textContent = pass;
+    }
+    function reset(){
+        document.getElementById("len").value=12;
+        document.getElementById("upper").checked=true;
+        document.getElementById("nums").checked=true;
+        document.getElementById("special").checked=true;
+        document.getElementById("passOut").textContent="Your Password Has been Reset";
+
+
+    }
+    </script>
+    
+</body>
+</html>
