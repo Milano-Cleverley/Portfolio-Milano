@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Berat</title>
+    <link rel="stylesheet" href="konversisatuan.css">
+</head>
+<body>
+    <div class="utama">
+      <div class="navbar">
+        <div class="judul">
+          <h1 style="margin-top: 30px; display: flex;
+    justify-content: center;
+    align-items: center;">Konversi Satuan Berat by<span style="font-family: kunstler script;">Milano Cleverley</span></h1>
+        </div>
+      </div>
+        <div class="duakotak">
+          <div class="bks-utama">
+                        <div class="atasbawah">
+                <div class="kotak">
+                 
+     
+            <p  style="margin-top:50px;margin-left: 5%;">Masukan angka awal : </p>
+            <input   style="margin-top:10px;width: 85%;padding: 10px;border-radius: 10px;margin-left: 5%;" type="number" id="ang1" placeholder="Masukkan angka awal">
+            <br><br>
+            <p style="margin-left: 5%;">Masukan Satuan Awal:</p>
+            <select  style="margin-top:20px;width: 90%;padding: 10px;border-radius: 10px;margin-left: 5%;" name="" id="awal">
+              <option value=""></option>
+                <option value="kg">Kilogram</option>
+                <option value="hg">Hektogram</option>
+                 <option value="dag">Dekagram</option>
+                <option value="g">Gram</option>
+                 <option value="dg">Decigram</option>
+                <option value="cg">Centigram</option>
+                   <option value="mg">Miligram</option>
+            </select>
+            <p style="margin-top: 10px;margin-left: 5%;">Masukan Tujuan Konversi:</p>
+                    <select  style="margin-top:10px;width: 90%;padding: 10px;border-radius: 10px;margin-left: 5%;" name="" id="akhir">
+                      <option value=""></option>
+                <option value="kg">Kilogram</option>
+                <option value="hg">Hektogram</option>
+                 <option value="dag">Dekagram</option>
+                <option value="g">Gram</option>
+                 <option value="dg">Decigram</option>
+                <option value="cg">Centigram</option>
+                   <option value="mg">Miligram</option>
+            </select>
+            <br>
+            <button style="margin-top: 20px;padding: 10px;width: 20%;border-radius: 10px;margin-left: 5%;" onclick="hasil()">Hitung</button>
+                </div>
+                        <div class="kotak">
+                      <p  style="margin-top:10px;text-align: center;">Hasil Konversi </p>
+                      <p style="font-size: 78px;margin-top: 90px;margin-left: 30%;"><span id="hasil"></span></p>
+
+        </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script>
+        function hasil(){
+                let cel = parseFloat(document.getElementById('ang1').value);
+                let awal = document.getElementById('awal').value;
+                let akhir = document.getElementById('akhir').value;
+              if(awal=="kg" && akhir == "kg"){
+                let jumlah = cel
+                document.getElementById('hasil').innerHTML=jumlah+" Kg";
+              }else if(awal =="kg" &&akhir =="hg"){
+                     let jumlah =cel*10
+                document.getElementById('hasil').innerHTML=jumlah+" Hg";
+              }
+              else if(awal =='kg' &&akhir =='dag'){
+                     let jumlah = cel*100
+                document.getElementById('hasil').innerHTML=jumlah+" Dag";
+              }else if(awal =='kg' &&akhir =='g'){
+                     let jumlah = cel*1000
+                document.getElementById('hasil').innerHTML=jumlah+" G";
+              }else if(awal =='kg' &&akhir =='dg'){
+                     let jumlah = cel*10000
+                document.getElementById('hasil').innerHTML=jumlah+" Dg";
+              }else if(awal =='kg' &&akhir =='cg'){
+                     let jumlah = cel*100000
+                document.getElementById('hasil').innerHTML=jumlah+" Cg";
+              }else if(awal =='kg' &&akhir =='mg'){
+                     let jumlah =cel*1000000
+                document.getElementById('hasil').innerHTML=jumlah+" Mg";
+              }else if(awal =='hg' &&akhir =='kg'){
+                     let jumlah = cel/10
+                document.getElementById('hasil').innerHTML=jumlah+" Kg";
+              }else if(awal =='hg' &&akhir =='hg'){
+                     let jumlah = cel
+                document.getElementById('hasil').innerHTML=jumlah+" Hg";
+              }else if(awal =='hg' &&akhir =='dag'){
+                     let jumlah = cel*10
+                document.getElementById('hasil').innerHTML=jumlah+" Dag";
+              }
+              else if(awal == "hg" && akhir == "g"){
+                let jumlah = cel*100
+                document.getElementById('hasil').innerHTML = jumlah+" G";
+            }else if(awal =='hg' &&akhir =='dg'){
+                     let jumlah = cel*1000
+                document.getElementById('hasil').innerHTML=jumlah+" Dg";
+              }  else if(awal == "hg" && akhir == "cg"){
+                let jumlah = cel*10000
+                document.getElementById('hasil').innerHTML = jumlah+" Cg";
+            }else if(awal =='hg' &&akhir =='mg'){
+                     let jumlah = cel*100000
+                document.getElementById('hasil').innerHTML=jumlah+" Mg";
+              }else if(awal =='dag' &&akhir =='kg'){
+                      let jumlah = cel/100
+                document.getElementById('hasil').innerHTML=jumlah+" Kg";
+              }else if(awal =='dag' &&akhir =='hg'){
+                      let jumlah = cel/10
+                document.getElementById('hasil').innerHTML=jumlah+" Hg";
+              }else if(awal =='dag' &&akhir =='dag'){
+                      let jumlah = cel
+                document.getElementById('hasil').innerHTML=jumlah+" Dag";
+              }else if(awal =='dag' &&akhir =='g'){
+                      let jumlah = cel*10
+                document.getElementById('hasil').innerHTML=jumlah+" G";
+              }else if(awal =='dag' &&akhir =='dg'){
+                      let jumlah = cel*100
+                document.getElementById('hasil').innerHTML=jumlah+" Dg";
+              }else if(awal =='dag' &&akhir =='cg'){
+                      let jumlah = cel*1000
+                document.getElementById('hasil').innerHTML=jumlah+" Cg";
+              }else if(awal =='dag' &&akhir =='mg'){
+                      let jumlah = cel*10000
+                document.getElementById('hasil').innerHTML=jumlah+" Mg";
+              }
+              else if(awal =='g' &&akhir =='kg'){
+                      let jumlah = cel/1000
+                document.getElementById('hasil').innerHTML=jumlah+" Kg";
+              }else if(awal =='g' &&akhir =='hg'){
+                      let jumlah = cel/100
+                document.getElementById('hasil').innerHTML=jumlah+" Hg";
+              }else if(awal =='g' &&akhir =='dag'){
+                      let jumlah = cel/10
+                document.getElementById('hasil').innerHTML=jumlah+" Dag";
+              }else if(awal =='g' &&akhir =='g'){
+                      let jumlah = cel
+                document.getElementById('hasil').innerHTML=jumlah+" G";
+              }else if(awal =='g' &&akhir =='dg'){
+                      let jumlah = cel*10
+                document.getElementById('hasil').innerHTML=jumlah+" Dg";
+              }else if(awal =='g' &&akhir =='cg'){
+                      let jumlah = cel*100
+                document.getElementById('hasil').innerHTML=jumlah+" Cg";
+              }else if(awal =='g' &&akhir =='mg'){
+                      let jumlah = cel*1000
+                document.getElementById('hasil').innerHTML=jumlah+" Mg";
+              }else if(awal =='dg' &&akhir =='kg'){
+                      let jumlah = cel/10000
+                document.getElementById('hasil').innerHTML=jumlah+" Kg";
+              }else if(awal =='dg' &&akhir =='hg'){
+                      let jumlah = cel/1000
+                document.getElementById('hasil').innerHTML=jumlah+" Hg";
+              }else if(awal =='dg' &&akhir =='dag'){
+                      let jumlah = cel/100
+                document.getElementById('hasil').innerHTML=jumlah+" Dag";
+              }else if(awal =='dg' &&akhir =='g'){
+                      let jumlah = cel/10
+                document.getElementById('hasil').innerHTML=jumlah+" G";
+              }else if(awal =='dg' &&akhir =='dg'){
+                      let jumlah = cel
+                document.getElementById('hasil').innerHTML=jumlah+"Dg";
+              }else if(awal =='dg' &&akhir =='cg'){
+                      let jumlah = cel*10
+                document.getElementById('hasil').innerHTML=jumlah+" Cg";
+              }else if(awal =='dg' &&akhir =='mg'){
+                      let jumlah = cel*100
+                document.getElementById('hasil').innerHTML=jumlah+"g";
+              }else if(awal =='cg' &&akhir =='kg'){
+                      let jumlah = cel/100000
+                document.getElementById('hasil').innerHTML=jumlah+" Kg";
+              }else if(awal =='cg' &&akhir =='hg'){
+                      let jumlah = cel/10000
+                document.getElementById('hasil').innerHTML=jumlah+" Hg";
+              }else if(awal =='cg' &&akhir =='dag'){
+                      let jumlah = cel/1000
+                document.getElementById('hasil').innerHTML=jumlah+" Dag";
+              }else if(awal =='cg' &&akhir =='g'){
+                      let jumlah = cel/100
+                document.getElementById('hasil').innerHTML=jumlah+" G";
+              }else if(awal =='cg' &&akhir =='dg'){
+                      let jumlah = cel/10
+                document.getElementById('hasil').innerHTML=jumlah+" Dg";
+              }else if(awal =='cg' &&akhir =='cg'){
+                      let jumlah = cel
+                document.getElementById('hasil').innerHTML=jumlah+" Cg";
+              }else if(awal =='cg' &&akhir =='mg'){
+                      let jumlah = cel*10
+                document.getElementById('hasil').innerHTML=jumlah+" Mg";
+              }else if(awal =='mg' &&akhir =='kg'){
+                      let jumlah = cel/1000000
+                document.getElementById('hasil').innerHTML=jumlah+" Kg";
+              }else if(awal =='mg' &&akhir =='hg'){
+                      let jumlah = cel/100000
+                document.getElementById('hasil').innerHTML=jumlah+" Hg";
+              }else if(awal =='mg' &&akhir =='dag'){
+                      let jumlah = cel/10000
+                document.getElementById('hasil').innerHTML=jumlah+" Dag";
+              }else if(awal =='mg' &&akhir =='g'){
+                      let jumlah = cel/1000
+                document.getElementById('hasil').innerHTML=jumlah+" G";
+              }else if(awal =='mg' &&akhir =='dg'){
+                      let jumlah = cel/100
+                document.getElementById('hasil').innerHTML=jumlah+" Dg";
+              }else if(awal =='mg' &&akhir =='cg'){
+                      let jumlah = cel/10
+                document.getElementById('hasil').innerHTML=jumlah+" Cg";
+              }else if(awal =='cg' &&akhir =='mg'){
+                      let jumlah = cel
+                document.getElementById('hasil').innerHTML=jumlah+" Mg";
+              }
+            }
+    </script>
+</body>
+</html>

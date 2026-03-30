@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan For Loop</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: linear-gradient(aquamarine,blue);
+            margin: 0;
+            padding: 0;
+            height: 95vh;
+        }
+
+        .bungkus {
+            width: 320px;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background-color: brown;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+       #output {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+
+    max-height: 200px;   
+    overflow-y: auto;   
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+#output::-webkit-scrollbar{
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="bungkus">
+    <input type="number" id="numberInput" placeholder="Masukkan angka">
+    <button onclick="tampilkanAngka()">Tampilkan</button>
+
+    <div id="output"></div>
+</div>
+
+<script>
+function tampilkanAngka() {
+    let angka = document.getElementById("numberInput").value;
+    let output = document.getElementById("output");
+
+    output.innerHTML = "";
+
+    // 1 sampai N
+    output.innerHTML += "<strong>Angka 1 sampai " + angka + ":</strong><br>";
+    for (let i = 1; i <= angka; i++) {
+        output.innerHTML += i + " ";
+    }
+
+    // Ganjil
+    output.innerHTML += "<br><br><strong>Angka Ganjil:</strong><br>";
+    for (let i = 1; i <= angka; i++) {
+        if (i % 2 === 1) {
+            output.innerHTML += i + " ";
+        }
+    }
+
+    // Genap
+    output.innerHTML += "<br><br><strong>Angka Genap:</strong><br>";
+    for (let i = 1; i <= angka; i++) {
+        if (i % 2 === 0) {
+            output.innerHTML += i + " ";
+        }
+    }
+
+    // Kelipatan 3
+    output.innerHTML += "<br><br><strong>Kelipatan 3:</strong><br>";
+    for (let i = 1; i <= angka; i++) {
+        if (i % 3 === 0) {
+            output.innerHTML += i + " ";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
