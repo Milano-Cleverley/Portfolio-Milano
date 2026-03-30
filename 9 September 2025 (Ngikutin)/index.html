@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket Sederhana By Milano 8A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="bks-navbar">
+            <div class="kiri">
+   <div style="width: 25%;" class="pilihan">
+                    <h1>Theather</h1>
+                </div>
+                  <div class="pilihan">
+                    <p>Tv <span style="margin-left: 5px;">Show</span></p>
+                </div>
+                  <div class="pilihan">
+                    <p>Movies</p>
+                </div>
+                  <div class="pilihan">
+                    <p>Videos</p>
+                </div>
+            </div>
+            <div class="kanan">
+             
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="utama">
+        <div class="bks-utama">
+            <div class="kiri2">
+<img style="width: 85%;border-radius: 10px;margin-left: 15px;"   src="gambar1.png" alt="" id="img" >
+<button style="margin-left: 15px;">Suka</button>
+<Button style="margin-left: 95px;">Tidak Suka</Button>
+            </div>
+            <div class="tengah">
+<div class="judul">
+    <h2 id="judul">Judul film</h2>
+</div>
+<div class="button">
+<div class="kiri3">
+<button style="width: 95%;background-color: maroon;border-radius: 10px;color: white;height: 5vh;">Tonton</button>
+</div>
+<div class="kanan3">
+<p style="margin-left: 25px;">Download
+
+</p>
+</div>
+</div>
+<div class="sinopsis">
+    <p>Sinopsis</p>
+</div>
+<div class="sinopsis2">
+<div class="bks-sinopsis2">
+    <p id="sinopsis"></p>
+</div>
+</div>
+            </div>
+            <div class="kanan2">
+                <div class="film">
+                    <div class="pilih">
+                        <p>Pilih Film</p>
+                    </div>
+                    <div class="daftar">
+                         <select style="text-align: center;" name="" id="film">
+        <option value="">-- Daftar Film --</option>
+        <option value="film1">The Conjuring - Last Rites</option>
+        <option value="film2">Exit 8</option>
+        <option value="film3">Long Walk</option>
+        <option value="film4">Jumbo</option>
+        <option value="film5">Ejen Ali:Misi Satria</option>
+        <option value="film6">Ne zha 2</option>
+        <option value="film7">Cek Toko Sebelah</option>
+        <option value="film8">Merah Putih One For All</option>
+        <option value="film9">Imperfect(2019)</option>
+        <option value="film10">Miracle in Cell No.7 (2022, Indonesia)</option>
+
+    </select>
+   
+                    </div>
+                     <div class="harga">
+       <div class="bks-harga">
+        <div class="harga2">
+            <p>Harga:</p>
+        </div>
+        <div class="input">
+            <p id="harga"></p>
+        </div>
+       </div>
+    </div>
+      <div style="margin-top: 20px;" class="harga">
+       <div class="bks-harga">
+        <div class="harga2">
+            <p>Jumlah Tiket:</p><br><br>
+        </div>
+        <div style="background-color: maroon;" class="input">
+           <input type="number" id="j_tiket">
+        </div>
+       </div>
+    </div>
+   
+    
+     <div style="margin-top: 10px;" class="harga">
+       <div class="bks-harga">
+        <div class="harga2">
+            <p>Jumlah Bayar:</p>
+        </div>
+        <div class="input">
+            <p id="bayar">0</p>
+        </div>
+       </div>
+    </div>
+     <div class="Bayar">
+        <div class="bks-bayar">
+<button onclick="hitung()">Bayar</button>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    let selectElement = document.getElementById('film');
+    let imgElement = document.getElementById('img')
+    let harga;
+    selectElement.addEventListener("change",function(){
+        let selectValue=selectElement.value;
+
+        if(selectValue === "film1"){
+            imgElement.src='gambar1.png'
+            harga=50000
+            sinopsis=`Film Conjuring yang konon disebut-sebut sebagai babak terakhir ini dibuka dengan Lorraine dan Ed muda saat mereka menanti kelahiran anak mereka, Judy.
+Teror dan keajaiban hadir di malam yang sama-yang membuat pasangan ini mempunyai ikatan yang kuat dengan anak mereka. Pembukaan ini adalah alasan kenapa Lorraine (Vera Farmiga) dan Ed (Patrick Wilson) sangat protektif dengan Judy (Mia Tomlinson).
+Dan setelah apa yang terjadi dengan Ed di film sebelumnya, pasangan ini memutuskan untuk tidak lagi turut serta dalam proses pengusiran setan.
+Masalahnya adalah sebuah keluarga baru saja terkena teror yang tidak ada hentinya. Keluarga Smurl seperti di film Conjuring pertama adalah sebuah keluarga besar yanvg bahagia.
+Mereka bukan keluarga yang kaya tapi mereka sangat akrab dengan satu sama lain. Setiap jengkal rumah mereka diisi tawa dan kehangatan. Semuanya berubah ketika cermin terkutuk hadir dan mulai menghantui seisi rumah satu per satu.
+
+
+`
+judul=`The Conjuring - Last Rites`
+        }else if(selectValue ==="film2"){
+            imgElement.src='gambar2.png'
+            harga=50000
+
+            sinopsis=`Seorang pria tiba-tiba terjebak di lorong bawah tanah stasiun yang seakan tak berujung. Satu-satunya jalan keluar adalah menemukan Exit 8. Namun ada aturan yang harus dipatuhi: setiap kali melihat sesuatu yang aneh, ia harus segera berbalik. Jika tidak, ia akan kembali ke titik awal dan terjebak dalam lingkaran tanpa akhir.
+
+Dalam perjalanan, ia berulang kali bertemu sosok-sosok misterius—seorang pria yang hanya berdiri diam, seorang wanita asing, dan bayangan lain yang tak bisa dijelaskan. Situasi itu membuat batas antara realitas dan ilusi makin kabur.
+
+Film horor psikologis Jepang ini diadaptasi dari game indie viral The Exit 8, yang terkenal karena atmosfer mencekam dan konsep loop tak berujung. Tanpa mengandalkan jumpscare berlebihan, film ini menekan mental penonton dengan suasana asing yang terasa akrab, membuat semua orang bertanya-tanya: apakah benar-benar ada jalan keluar?`
+judul=`Exit 8`
+        }else if (selectValue ==="film3"){
+imgElement.src='gambar3.png'
+            harga=50000
+
+sinopsis=`“The Long Walk” bercerita tentang sebuah perjalanan panjang yang mempertemukan manusia dengan batas ketahanan fisik, waktu, dan takdir.
+
+Di satu sisi, kisahnya mengikuti seratus pemuda yang dipaksa ikut dalam sebuah kontes berjalan mematikan. Mereka harus terus melangkah tanpa henti, dengan aturan sederhana namun kejam: siapa pun yang berhenti atau melambat akan ditembak mati di tempat. Dari awal, perjalanan ini bukan sekadar lomba, melainkan bentuk hiburan bagi rezim penguasa yang kejam. Seiring langkah demi langkah, satu per satu peserta tumbang, menyisakan hanya sedikit yang masih mampu bertahan. Tokoh utama, Ray Garraty, bukan hanya berjuang melawan rasa sakit, haus, dan lelah, tapi juga melawan dirinya sendiri—antara keinginan untuk hidup, rasa takut akan kematian, dan pertanyaan apakah kemenangan yang dijanjikan benar-benar sepadan dengan harga yang harus dibayar.
+
+Namun di sisi lain, perjalanan panjang itu juga bisa dilihat melalui kisah seorang pria tua di Laos, yang hidup ditemani oleh arwah perempuan yang tewas di jalan bertahun-tahun lalu. Dari arwah itu, ia menemukan kemampuan untuk menembus alur waktu. Dengan melangkah ke masa lalu, ia mencoba memperbaiki keputusan-keputusan yang menjerat hidupnya dalam penyesalan: hubungan dengan ibunya, kesepian masa mudanya, hingga perasaan bersalah yang tak pernah usai. Tapi semakin jauh ia berjalan dalam waktu, semakin jelas terlihat bahwa mengubah masa lalu bukanlah jalan menuju kebebasan, melainkan jebakan yang penuh konsekuensi kelam.
+
+Pada akhirnya, “The Long Walk” menjadi metafora tentang hidup itu sendiri: sebuah perjalanan yang tak bisa berhenti, penuh penderitaan dan pilihan sulit. Entah itu dalam bentuk lomba berdarah yang hanya menyisakan satu pemenang, atau perjalanan spiritual yang menembus batas waktu, keduanya sama-sama menyingkap pertanyaan besar: seberapa jauh manusia mampu berjalan untuk melawan takdir, dan apakah kemenangan sejati itu benar-benar ada?`
+judul=`Long Walk`
+        }else if(selectValue === "film4"){
+imgElement.src='gambar4.png'
+            harga=50000
+
+sinopsis=`“Jumbo” mengisahkan Don, seorang anak yatim piatu yang akrab dipanggil Jumbo karena tubuhnya gempal. Sehari-hari ia menjadi sasaran ejekan dan perundungan teman-temannya, tetapi satu-satunya harta berharga yang ia miliki adalah sebuah buku dongeng berjudul Pulau Gelembung—warisan dari orang tuanya, beserta sebuah lagu ciptaan sang ibu yang penuh kenangan.
+
+Suatu hari, Don memutuskan untuk tampil di pentas seni sekolah, menampilkan kisah dari buku itu lengkap dengan lagu ibunya. Bagi Don, ini adalah cara untuk membuktikan bahwa dirinya bukan sekadar bahan olokan, melainkan anak yang berani dan penuh imajinasi. Namun, rencananya hancur ketika buku dongeng itu dicuri oleh Atta, seorang pembuli yang ingin menjatuhkannya.
+
+Di tengah keputusasaan, Don bersama dua sahabatnya—Mae dan Nurman—bertemu dengan Meri, arwah seorang gadis kecil yang meminta tolong agar makam keluarganya diperbaiki. Pertemuan itu menuntun mereka pada sebuah petualangan tak terduga: mencuri kembali buku yang hilang, membantu Meri menemukan ketenangan, sekaligus mengumpulkan keberanian untuk berdiri di atas panggung.
+
+Perjalanan Don menjadi kisah tentang keberanian menghadapi rasa takut, arti persahabatan, serta cinta yang tetap hidup meski orang yang dicintai telah tiada. Dengan imajinasi, tekad, dan dukungan sahabat, Jumbo belajar bahwa kemenangan terbesar bukanlah melawan para pembuli, melainkan menemukan keberanian untuk menjadi dirinya sendiri.`
+        judul=`Jumbo`
+}else if (selectValue ==="film5"){
+            imgElement.src='gambar5.png'
+            harga=50000
+
+            sinopsis =`Ejen Ali yang kini sudah lebih matang kembali menghadapi tantangan besar ketika Projek Satria, satu set baju zirah super canggih hasil riset MATA, diperkenalkan. Ali dipercaya sebagai agen pertama untuk menguji teknologi baru ini. Namun, misi ini lebih rumit dari sekedar peluncuran—Ali harus berhadapan dengan ancaman penjahat siber yang ingin menghancurkan sistem kota Cyberaya. Di luar konflik eksternal tersebut, Ali juga bergulat dengan konflik internal: rasa takut, tanggung jawab besar, dan keraguan diri menambah intensitas perjuangannya. Dalam peluncuran ini, ia bukan hanya menguji kekuatan Satria, tapi juga kekuatan dalam dirinya sendiri`
+       judul=`Ejen Ali :Misi Satria`
+        }
+        else if (selectValue ==="film6"){
+            imgElement.src='gambar6.png'
+            harga=50000
+
+sinopsis = `Setelah peristiwa besar yang menghancurkan tubuhnya, Ne Zha dan sahabatnya Ao Bing hanya tersisa dalam bentuk roh. Dikuatkan oleh guru mereka, Taiyi Zhenren, mereka direkonstruksi kembali menggunakan Bunga Teratai Berwarna Tujuh, tetapi tubuh baru itu rapuh dan penuh tantangan. Perjalanan mereka dipenuhi ujian berbahaya—dengan konflik antara klan naga dan dunia manusia—yang menguji identitas, ikatan, dan tujuan hidup mereka. Dalam pertarungan besar melawan ancaman kuno yang ingin menghancurkan umat manusia, Ne Zha bergaung penuh untuk menjadi pahlawan sejati, sementara Ao Bing bergulat dengan identitasnya sebagai roh dan manusia.`
+       judul=`Ne Zha 2`
+}else if (selectValue ==="film7"){
+            imgElement.src='gambar7.png'
+            sinopsis=`Erwin, seorang profesional sukses dan anak bungsu, hidup tenang bersama kekasihnya, Natalie. Tapi semuanya berubah ketika ayahnya, Koh Afuk, sakit dan memutuskan memberikan toko kelontong keluarga kepada Erwin—bukan kepada kakaknya, Yohan, yang merasa layak. Erwin ragu karena kariernya sedang menanjak dan Natalie tidak setuju. Namun dengan bujukan ayahnya, ia menerima tantangan: mengelola toko selama sebulan uji coba. Konflik keluarga, tanggung jawab, dan realitas kehidupan pun menyatu dalam drama komedi hangat tentang warisan, tanggung jawab, dan arti keluarga`
+            harga=50000
+judul=`Cek Toko Sebelah 2 `
+        }else if (selectValue ==="film8"){
+            imgElement.src='gambar8.png'
+            harga=50000
+judul=`Merah Putih One for All`
+            sinopsis=`Merah Putih: One for All dibuka di sebuah desa yang tenang, tengah bersiap menyemarakkan perayaan HUT RI—merayakan Indonesia merdeka yang ke-80. Di tengah gegap gempita itu, terbentuklah sebuah kelompok istimewa bernama "Tim Merah Putih", yang terdiri dari delapan anak dari berbagai latar budaya: Betawi, Papua, Medan, Tegal, Jawa Tengah, Makassar, Manado, dan keturunan Tionghoa Tugas mereka sangat sakral: menjaga Bendera Pusaka Merah Putih yang akan dikibarkan saat upacara 17 Agustus Namun, tragedi kecil pun muncul — tiga hari sebelum upacara, bendera itu menghilang secara misterius dari gudang desa bercita-cita menyelamatkan simbol nasionalitas ini pun bersatu. Mereka memulai petualangan lintas alam: menyeberangi sungai deras, menjelajahi hutan lebat, menghadapi badai, bahkan menyelamatkan seekor burung beo di tengah perjalanan Dalam misi penuh tantangan ini, setiap anak belajar untuk saling memahami dan meredam ego masing-masing. Dari perbedaan tradisi dan kebiasaan, mereka menemukan kekuatan dalam kebersamaan—bahwa keberagaman tidak melebarkan jurang, tapi menjadi fondasi persatuan Dengan keberanian dan kerja sama yang tumbuh, mereka akhirnya berhasil menemukan dan meraih kembali bendera pusaka untuk dikibarkan tepat pada waktunya Film ini sarat dengan momen heroik, lucu, dan menyentuh—menyiratkan betapa cinta tanah air dan semangat nasionalisme bisa menyatukan anak-anak lintas budaya untuk tujuan mulia`
+        }else if(selectValue ==="film9"){
+            harga=50000
+imgElement.src='gambar10.png'
+sinopsis=`Imperfect (2019)
+
+Film komedi-drama karya Ernest Prakasa ini bercerita tentang Rara, seorang perempuan cerdas yang bekerja di perusahaan kosmetik. Berbeda dengan adiknya yang cantik dan langsing, Rara bertubuh besar dan sering merasa minder dengan penampilannya. Di tengah usahanya mengejar promosi kerja, ia dipaksa untuk menurunkan berat badan agar sesuai standar “cantik” di perusahaannya. Hal ini membuat hubungan Rara dengan pacarnya, Dika, juga ikut terguncang. Film ini menyoroti isu body shaming, kepercayaan diri, serta bagaimana cinta dan penerimaan sejati bukan bergantung pada penampilan luar, melainkan hati.`
+       judul=`Imperfect(2019)`
+}else{
+            harga=50000
+imgElement.src='gambar9.png'
+sinopsis=`Miracle in Cell No.7 (2022, Indonesia)
+
+Adaptasi dari film Korea populer, versi Indonesia ini mengisahkan Dodo Rozak, seorang ayah dengan keterbelakangan mental yang sangat menyayangi putrinya, Kartika. Hidup mereka sederhana namun penuh kasih sayang. Suatu hari, Dodo dituduh melakukan kejahatan yang tidak ia lakukan dan dijebloskan ke penjara. Di balik jeruji, ia mendapat teman-teman sesama napi yang akhirnya membantu menyatukan kembali Dodo dengan Kartika secara diam-diam. Kisah ini sarat dengan momen haru, tawa, sekaligus kritik sosial tentang keadilan. Pada akhirnya, film ini menegaskan bahwa cinta seorang ayah tidak terbatas ruang maupun keadaan.`
+       judul=`Miracle in Cell No.7 (2022, Indonesia)`
+}
+        document.getElementById('harga').textContent ="Rp"+harga;
+         document.getElementById('sinopsis').textContent =sinopsis;
+                  document.getElementById('judul').textContent =judul;
+    })
+function hitung(){
+    let j_tiket = parseFloat(document.getElementById('j_tiket').value);
+    let bayar = harga*j_tiket
+    const format = bayar.toLocaleString('id-ID');
+document.getElementById('bayar').textContent=`Rp${format}`;
+  if(isNaN(j_tiket)){
+document.getElementById('bayar').textContent="Masukkan Jumlah Tiket nya Dahulu!"
+return;
+  }else if(j_tiket <=0){
+    document.getElementById('bayar').textContent="Tiket Tidak Bisa Di hitung"
+    return;
+  }
+
+
+}
+</script>
+
+</body>
+</html>

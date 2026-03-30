@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;justify-content: center;align-items: center;
+}
+.bks-navbar{
+    width: 95%;
+    height: 10vh;
+    display: flex;justify-content: space-between;align-items: center;
+}
+.kiri{
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.kanan{
+    width: 50%;
+    height: 10vh;
+}
+.pilihan{
+    width: 15%;
+    height: 10vh;
+        display: flex;justify-content: center;align-items: center;
+}
+.pilihan p {
+    font-size: 20px;
+    color: rgb(145, 154, 163);
+}
+.utama{
+    width: 100%;
+    height: 85vh;
+            display: flex;justify-content: center;align-items: center;
+}
+.bks-utama{
+    width: 95%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.kiri2{
+    width: 33%;
+    height: 75vh;
+}
+.tengah{
+    width: 33%;
+    height: 75vh;
+}
+.kanan2{
+    width: 35%;
+    height: 75vh;
+}
+.kiri2 button{
+    gap: 3%;
+    background-color: maroon;
+    width: 30%;
+    border-radius: 10px;
+    height: 5vh;
+    color: white;
+    margin-top: 20px;
+}
+.button{
+    width: 100%;
+    height: 10vh;
+       display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.judul{
+    width: 100%;
+    height: 5vh;
+}
+.kiri3{
+    width: 50%;
+    height: 10vh;
+       display: flex;
+       
+       align-items: center;
+}
+.kanan3{
+    width: 50%;
+   height: 10vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+.sinopsis{
+    width: 100%;
+    height: 5vh;
+
+}
+.sinopsis2{
+    width: 75%;
+    height: 51vh;
+    background-color: rgb(183, 187, 191);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.bks-sinopsis2{
+    width: 95%;
+    height: 50vh;
+        overflow: scroll;
+}
+.bks-sinopsis2::-webkit-scrollbar{
+    display: none;
+}
+
+.film{
+    width: 70%;
+    height: 75vh;
+    background-color: maroon;
+    border-radius: 10px;
+}
+.pilih{
+    width: 100%;
+    height: 5vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.daftar{
+    width: 100%;
+    height: 10vh;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.daftar select{
+    border-radius: 10px;
+padding: 10px;
+}
+.harga{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.bks-harga{
+    width: 95%;
+    height: 10vh;
+}
+.harga2{
+    width: 100%;
+    height: 3vh;
+    color: white;
+    
+}
+.harga2 p{
+    margin-left: 30px;
+}
+.input{
+    width: 90%;
+    height: 7vh;
+    background-color: rgb(148, 151, 155);
+    border-radius: 10px;
+    margin-left: 20px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bks-input{
+    width: 95%;
+    height: 5vh;
+}
+.input input{
+    width: 95%;
+    height: 5vh;
+    background-color: rgb(148, 151, 155);
+    border-radius: 10px;
+    
+}
+.Bayar{
+    width: 100%;
+    height: 20vh;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bks-bayar{
+    width: 85%;
+    height: 15vh;
+}
+.bks-bayar button{
+    width: 100%;
+    height: 5vh;
+    background-color:  rgb(148, 151, 155);
+    border-radius: 10px;
+    margin-left: 5px;
+}
+@media(max-width:667px){
+    .navbar{
+        width: 100%;
+        font-size: 10px;
+    }
+    .kiri{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .bks-utama{
+        display: block;
+        flex-wrap: wrap;
+    }
+    .kanan2{
+        width: 100%;
+            margin-left: 35px;
+    }
+    .kiri2{
+        width: 100%;
+        
+    }
+    .tengah{
+        width: 100%;
+        margin-left: 35px;
+    }
+    .utama{
+        height: 90vh;
+    }
+  .pilihan p {
+width: 100%;
+font-size: 20px;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+
+  }
+
+  .bks-navbar{
+    width: 100%;
+  }
+ 
+  .kanan{
+    width: 30%;
+
+  }
+  .kiri{
+    width: 70%;
+  }
+    .pilihan h1{
+width: 100%;
+font-size: 20px;
+  }
+  .bks-navbar{
+    width: 100%;
+  }
+  .kiri{
+    gap: 20%;
+  }
+
+    
+}
