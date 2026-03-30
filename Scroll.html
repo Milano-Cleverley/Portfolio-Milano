@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animasi</title>
+    <link rel="stylesheet" href="Scroll.css">
+</head>
+<body>
+    <h1>Scroll untuk melihat Soal</h1>
+    <div class="box">
+  <p>Soal 1: Mana yang benar di bawah ini 👇</p>
+  <input type="radio" name="soal1" value="a"> A. let<br>
+  <input type="radio" name="soal1" value="b"> B. lat<br>
+  <input type="radio" name="soal1" value="c"> C. Leti<br>
+  <input type="radio" name="soal1" value="d"> D. Lett<br>
+    </div>
+       <div class="box">
+        <p>Soal 2: Apa fungsi untuk memanggil class dari HTML?</p>
+  <input type="radio" name="soal2" value="a"> A. document.getElementById<br>
+  <input type="radio" name="soal2" value="b"> B. document.getElementsByClassName<br>
+  <input type="radio" name="soal2" value="c"> C. document.getElementByName<br>
+  <input type="radio" name="soal2" value="d"> D. document.getElementByTag<br>
+    </div>
+       <div class="box">
+<p>Soal 3: Fungsi “jika” di dalam JavaScript adalah?</p>
+  <input type="radio" name="soal3" value="a"> A. if<br>
+  <input type="radio" name="soal3" value="b"> B. else if<br>
+  <input type="radio" name="soal3" value="c"> C. else else if<br>
+  <input type="radio" name="soal3" value="d"> D. else<br>
+    </div>
+       <div class="box">
+        <p>Soal 4: Berikut ini yang digunakan untuk membuat variabel:</p>
+  <input type="radio" name="soal4" value="a"> A. let<br>
+  <input type="radio" name="soal4" value="b"> B. const<br>
+  <input type="radio" name="soal4" value="c"> C. var<br>
+  <input type="radio" name="soal4" value="d"> D. Semua benar<br>
+    </div>
+       <div class="box">
+              <p>Soal 5: Berikut ini yang digunakan untuk membuat nilai bertambah:</p>
+  <input type="radio" name="soal5" value="a"> A. ++<br>
+  <input type="radio" name="soal5" value="b"> B. +-<br>
+  <input type="radio" name="soal5" value="c"> C. -+<br>
+  <input type="radio" name="soal5" value="d"> D. --<br>
+    </div>
+       <div class="box">
+            <p>Soal 6: Berikut ini yang bisa mengeluarkan console:</p>
+  <input type="radio" name="soal6" value="a"> A. console.log()<br>
+  <input type="radio" name="soal6" value="b"> B.console()<br>
+  <input type="radio" name="soal6" value="c"> C. logconsole()<br>
+  <input type="radio" name="soal6" value="d"> D.Semua Benar<br>
+    </div>
+       <div class="box">
+      <p>Soal 7: Berikut ini yang bisa mengeluarkan suatu variabel </p>
+  <input type="radio" name="soal7" value="a"> A. lot<br>
+  <input type="radio" name="soal7" value="b"> B. costn<br>
+  <input type="radio" name="soal7" value="c"> C. cons <br>
+  <input type="radio" name="soal7" value="d"> D.vars<br>
+    </div>
+       <div class="box">
+      <p>Soal 8: apa yang di gunakan untuk memanggil JavaScript</p>
+  <input type="radio" name="soal8" value="a"> A. script<br>
+  <input type="radio" name="soal8" value="b"> B.div<br>
+  <input type="radio" name="soal8" value="c"> C. html<br>
+  <input type="radio" name="soal8" value="d"> D.css<br>
+    </div>
+       <div class="box">
+           <p>Soal 9: let a = 10 , console.log(a+6);Output dari kode ini adalah</p>
+  <input type="radio" name="soal9" value="a"> A. 16<br>
+  <input type="radio" name="soal9" value="b"> B.Error<br>
+  <input type="radio" name="soal9" value="c"> C. "10"+6<br>
+  <input type="radio" name="soal9" value="d"> D.Semua Benar<br>
+    </div>
+       <div class="box">
+          <p>Soal 10 : apa fungsi dari querySelectorAll?</p>
+  <input type="radio" name="soal10" value="a"> A. untuk dekorasi<br>
+  <input type="radio" name="soal10" value="b"> B.untuk menambah value<br>
+  <input type="radio" name="soal10" value="c"> C.untuk mendeklarasikan element<br>
+  <input type="radio" name="soal10" value="d"> D.untuk memilih semua jenis yang di pilih dari <span style="margin-left: 50px;">HTML</span><br>
+    </div>
+       <div class="box">
+  <p style="font-size: 35px; margin-top: 50px;margin-left: 50px;">Hasil benar: <span id="hasil"></span> soal</p>
+    </div>
+       <div class="box">
+         <button style="margin-top: 50px;padding: 10px;width: 100%;background-color: aquamarine;border-radius: 10px;" onclick="Cekjawaban()">HASIL</button>
+</div>
+
+<script>
+
+        const boxes=document.querySelectorAll('.box');
+        window.addEventListener('scroll',checkBoxes)
+        checkBoxes()
+        function checkBoxes(){
+        const triggerButton =window.innerHeight /5*4
+        boxes.forEach(box =>{
+        const boxTop =box.getBoundingClientRect().top
+        if(boxTop < triggerButton){
+        box.classList.add('show');
+        }else{
+        box.classList.remove('show');
+        }
+        }) 
+        }
+
+         function Cekjawaban() {
+      let skor = 0;
+
+    
+      const s1 = document.querySelector('input[name="soal1"]:checked')?.value;
+      const s2 = document.querySelector('input[name="soal2"]:checked')?.value;
+      const s3 = document.querySelector('input[name="soal3"]:checked')?.value;
+      const s4 = document.querySelector('input[name="soal4"]:checked')?.value;
+      const s5 = document.querySelector('input[name="soal5"]:checked')?.value;
+          
+      const s6 = document.querySelector('input[name="soal6"]:checked')?.value;
+      const s7 = document.querySelector('input[name="soal7"]:checked')?.value;
+      const s8 = document.querySelector('input[name="soal8"]:checked')?.value;
+      const s9 = document.querySelector('input[name="soal9"]:checked')?.value;
+      const s10 = document.querySelector('input[name="soal10"]:checked')?.value;
+    
+    if (s1 === "a") skor++;
+    if (s2 === "b") skor++;
+    if (s3 === "a") skor++;
+    if (s4 === "d") skor++;
+    if (s5 === "a") skor++;
+    if (s6 === "a") skor++;
+    if (s7 === "c") skor++;
+    if (s8 === "a") skor++;
+    if (s9 === "a") skor++;
+    if (s10 === "d") skor++;
+
+      document.getElementById('hasil').innerText = skor;
+    }
+
+    </script>
+
+</body>
+</html>

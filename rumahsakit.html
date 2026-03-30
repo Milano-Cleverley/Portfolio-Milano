@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rumahsakit.css">
+</head>
+<body>
+<div class="utama">
+    <div class="navbar">
+        <div class="bks-navbar">
+            <h2>Rumah Sakit Republik Indonesia Raya</h2>
+        </div>
+    </div>
+    <div class="bks-utama">
+       <div class="bks-kotak">
+         <div class="kotak1">
+         <div class="atas">
+            <h2>Counter 1 </h2>
+         </div>
+         <div class="tengah">
+            <h1>D<span id="number">0</span></h1>
+         </div>
+         <div class="bawah">
+              <button style="background-color: greenyellow;width: 15%;height: 5vh;" id="plus" onclick="tambah()">+</button>
+      <button style="background-color: grey;width: 30%;height: 5vh;" id="reset" onclick="reset()">Reset</button>
+    <button style="background-color: red;width: 15%;height: 5vh;"  id="minus" onclick="kurang()">-</button>
+         </div>
+        </div>
+        <div class="kotak2">
+                   <div class="atas">
+            <h2>Counter 2 </h2>
+         </div>
+         <div class="tengah">
+            <h1>A<span id="number2">0</span></h1>
+         </div>
+         <div class="bawah">
+              <button style="background-color: greenyellow;width: 15%;height: 5vh;" id="plus2" onclick="tambah2()">+</button>
+      <button style="background-color: grey;width: 30%;height: 5vh;" id="reset2" onclick="reset2()">Reset</button>
+    <button style="background-color: red;width: 15%;height: 5vh;"  id="minus2" onclick="kurang2()">-</button>
+         </div>
+        </div>
+       </div>
+    </div>
+</div>
+      <script>
+        let number=0;
+        let number2=0
+
+        function ubahTampilan(){
+            document.getElementById('number').textContent=number;
+               document.getElementById('plus').disabled=number===10
+     document.getElementById('minus').disabled=number===0
+        }
+        function tambah(){
+            number++;
+            ubahTampilan();
+
+        }
+        function reset(){
+            number=0
+            ubahTampilan()
+        }
+         function kurang(){
+            number--;
+            ubahTampilan();
+            
+        }
+         function change(){
+            document.getElementById('number2').textContent=number2;
+               document.getElementById('plus2').disabled=number2===10
+     document.getElementById('minus2').disabled=number2===0
+        }
+        function tambah2(){
+            number2++;
+            change();
+
+        }
+        function reset2(){
+            number2=0
+            change()
+        }
+         function kurang2(){
+            number2--;
+            change();
+            
+        }
+    </script>
+</body>
+</html>

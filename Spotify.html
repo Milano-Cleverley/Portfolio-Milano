@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify By Milano</title>
+    <link rel="stylesheet" href="Spotify.css">
+</head>
+<body>
+<div class="utama">
+    <div class="kiri">
+       <div class="atas">
+        <div class="bks-atas">
+              <p>🏠Home</p>
+            <p>🔎Browse</p>
+            <p>📻Radio</p>
+            <hr style="margin-top: 8px;">
+        </div>
+       </div>
+       <div class="tengah2">
+        <div class="atas2">
+            <p style="text-align: center; margin-top: 10px;">Playlist</p>
+            <p style="margin-top: 10px;">•Runaway-AURORA</p>
+            <p style="margin-top: 10px;">•Lay All Your Love On Me-ABBA</p>
+            <p style="margin-top: 10px;">•You'll Be In My Heart-NIKI</p>
+            <p style="margin-top: 10px;">•The Girl From Ipanema-Antonio Carlos Jobim</p>
+            <p style="margin-top: 10px;">•Cintakan membawamu kembali-Dewa 19</p>
+            <p style="margin-top: 30px;text-align: center;">New Playlist+</p>
+            <div style="display: flex;justify-content: center;align-items: center;text-align: center;" class="kotak">
+                
+            </div>
+            <p style="margin-top: 10px;text-align: center;">Welcome Mr.Milano</p>
+            <div style="margin-top: 10px;margin-left: 115px ;" class="bulat">
+
+            </div>
+            <hr style="margin-top: 10px;width: 85%;margin-left: 25px;">
+        </div>
+       </div>
+      
+    </div>
+    <div class="tengah">
+        <div class="navbar">
+            <div class="bks-navbar">
+                <div class="kiri2">
+                 <div class="bks-kiri2">
+                    <input style="width: 95%;" type="text" placeholder="Cari Musik 🎶">
+                 </div>
+                </div>
+                <div class="kanan2">
+                    <div class="bulat2">
+
+                    </div>
+                    <p style="margin-top: 7px;">Mr.Milano</p>
+                </div>
+            </div>
+        </div>
+        <div class="kotak2">
+         <div class="kasitengah">
+               <div class="kiri3">
+                <div class="kotak3">
+  
+                </div>
+             
+            </div>
+            <div style="margin-bottom: 50px;" class="kanan3">
+                <p>Playlist</p>
+                <h2 id="title">LAGU</h2>
+                <p>Create By <span id="album"></span></p>
+                <button style="background-color: green; padding: 10px;border-radius: 10px;">Download</button>
+<audio style="margin-top: 10px;margin-right: 10px;" src="Runaway.mp3" id="audioPlayer" controls></audio>
+
+            </div>
+
+         </div>
+        
+        </div>
+        <div class="table">
+<div class="bks-table">
+                     <table>
+        <tr>
+            <th style="width: 10%;">No</th>
+            <th>Title</th>
+            <th>Artis</th>
+            <th>Album</th>
+            <th>Time</th>
+        </tr>
+        <tr  onclick="pilihlagu(0)">
+            <td style="width: 10%;">1</td>
+            <td>Runaway</td>
+            <td>AURORA</td>
+            <td>Runaway</td>
+            <td>04:09</td>
+        </tr>
+        <tr onclick="pilihlagu(1)">
+            <td style="width: 10%;">2</td>
+            <td>Lay all your love on me</td>
+            <td>ABBA</td>
+            <td>Super trouper</td>
+            <td>04:40</td>
+        </tr>
+        <tr  onclick="pilihlagu(2)">
+            <td style="width: 10%;">3</td>
+            <td>You'll be My heart</td>
+            <td>Niki</td>
+            <td>NIKI</td>
+            <td>04:02</td>
+        </tr>
+          <tr  onclick="pilihlagu(3)">
+            <td style="width: 10%;">4</td>
+            <td>The Girl From Ipanema</td>
+            <td>Antonio Carlos Jobim</td>
+            <td>Garota de Ipanema </td>
+            <td>03:14</td>
+        </tr>
+          <tr  onclick="pilihlagu(4)">
+            <td style="width: 10%;">5</td>
+            <td>Cintakan Membawamu Kembali</td>
+            <td>Dewa 19</td>
+            <td>-</td>
+            <td>04:17</td>
+        </tr>
+          <tr  onclick="pilihlagu(5)">
+            <td style="width: 10%;">6</td>
+            <td>Separuh Nafasku</td>
+            <td>Dewa 19</td>
+            <td>-</td>
+            <td>03:42</td>
+        </tr>
+          <tr  onclick="pilihlagu(6)">
+            <td style="width: 10%;">7</td>
+            <td>Country Road</td>
+            <td>John Denver</td>
+            <td>-</td>
+            <td>03:15</td>
+        </tr>
+          <tr  onclick="pilihlagu(7)">
+            <td style="width: 10%;">8</td>
+            <td>I Want it that way</td>
+            <td>Backstreet Boys</td>
+            <td>Boys</td>
+            <td>03:31</td>
+        </tr>
+          <tr  onclick="pilihlagu(8)">
+            <td style="width: 10%;">9</td>
+            <td>My Way</td>
+            <td>Claude François & Jacques Revaux</td>
+            <td>My Way (1969)</td>
+            <td>04:36</td>
+        </tr>
+          <tr  onclick="pilihlagu(9)">
+            <td style="width: 10%;">10</td>
+            <td>Nothing's Gonna Change My Love For You</td>
+            <td>Michael Masser dan Gerry Goffin</td>
+            <td>Glenn Medeiros</td>
+            <td>04:02</td>
+        </tr>
+           <tr  onclick="pilihlagu(10)">
+            <td style="width: 10%;">11</td>
+            <td>Live While We're Young</td>
+            <td>One Direction</td>
+            <td>-</td>
+            <td>03:17</td>
+        </tr>
+         <tr  onclick="pilihlagu(11)">
+            <td style="width: 10%;">12</td>
+            <td>Menghujam Jantungku</td>
+            <td>Tompi</td>
+            <td>-</td>
+            <td>03:37</td>
+        </tr>
+        
+     </table>
+</div>
+        </div>
+<div class="bawah">
+    <div class="bks-bawah">
+            <button style="background-color: orange;" onclick="prevSong()">Pref</button>
+    <button style="background-color: grey;" onclick="pauseSong()">Play/Pause</button>
+    <button style="background-color: white;" onclick="stopSong()">Stop</button>
+    <button style="background-color: aqua;" onclick="nextSong()">Next</button>
+     <button  style="background-color: green;" onclick="ulangiSong()">Repeat : Off</button>
+    </div>
+</div>
+    </div>
+    <div class="kanan">
+     <div class="atastas">
+        <div class="tastostas">
+              <div class="lirik" id="lirik">
+       <p>Lirik Lagu Ada Disini</p>
+       <p id="hasil"></p>
+     </div>
+        </div>
+     </div>
+    </div>
+</div>
+
+
+        <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const lirik = document.getElementById('lirik');
+        const btnUlangi = document.querySelector("button[onclick='ulangiSong()']")
+        let isRepeat = false;
+        let title=document.getElementById('title');
+        let album=document.getElementById('album');
+        
+    
+        let lagu = [
+            {
+                src:'Runaway.mp3',lirik:`Runaway:
+                [Intro]
+(Ah-ah, ah-ah, ah-ah, ah-ah)
+
+[Verse 1]
+I was listenin' to the ocean
+I saw a face in the sand
+But when I picked it up
+Then it vanished away from my hands, dah
+I had a dream I was seven
+Climbin' my way in a tree
+I saw a piece of Heaven
+Waitin' impatient for me, dah
+
+[Pre-Chorus]
+And I was runnin' far away
+Would I run off the world someday?
+Nobody knows, nobody knows
+And I was dancing in the rain
+I felt alive and I can't complain
+
+[Chorus]
+But no, take me home
+Take me home where I belong
+I can't take it anymore
+
+[Verse 2]
+I was painting a picture
+The picture was a painting of you
+And for a moment I thought you were here
+But then again, it wasn't true, dah
+And all this time I have been lyin'
+Oh, lyin' in secret to myself
+I've been putting sorrow on the farthest place on my shelf
+La-di-da
+
+
+You might also like
+Runaway
+Kanye West
+So Long, London
+Taylor Swift
+St. Chroma
+Tyler, The Creator
+
+[Pre-Chorus]
+And I was runnin' far away
+Would I run off the world someday?
+Nobody knows, nobody knows
+And I was dancing in the rain
+I felt alive and I can't complain
+
+[Chorus]
+But no, take me home
+Take me home where I belong
+I got no other place to go
+No, take me home
+Take me home where I belong
+I got no other place to go
+No, take me home
+Take me home where I belong
+I can't take it anymore
+
+[Bridge]
+But I kept runnin' for a soft place to fall
+And I kept runnin' for a soft place to fall
+And I kept runnin' for a soft place to fall
+And I kept runnin' for a soft place to fall
+
+[Pre-Chorus]
+And I was runnin' far away
+Would I run off the world someday?
+
+
+ `,title:`RUNAWAY`,album:`AURORA - RUNAWAY`
+            },
+            {
+                  src:'Lay All Your Love On Me.mp3',lirik:`Lay All Your Love On Me:
+                  I wasn't jealous before we met
+Now every woman I see is a potential threat
+And I'm possessive, it isn't nice
+You've heard me saying that smoking was my only vice
+But now it isn't true
+Now everything is new
+And all I've learned has overturned
+I beg of you
+Don't go wasting your emotion
+Lay all your love on me
+It was like shooting a sitting duck
+A little small talk, a smile, and baby I was stuck
+I still don't know what you've done with me
+A grown-up woman should never fall so easily
+I feel a kind of fear
+When I don't have you near
+Unsatisfied, I skip my pride
+I beg you, dear
+Don't go wasting your emotion
+Lay all your love on me
+Don't go sharing your devotion
+Lay all your love on me
+I've had a few little love affairs
+They didn't last very long and they've been pretty scarce
+I used to think I was sensible
+It makes the truth even more incomprehensible
+'Cause everything is new
+And everything is you
+And all I've learned has overturned
+What can I do?
+Don't go wasting your emotion
+Lay all your love on me
+Don't go sharing your devotion
+Lay all your love on me
+Don't go wasting your emotion
+Lay all your love on me
+Don't go sharing your devotion
+Lay all your love on me
+Don't go wasting your emotion
+Lay all your love on me
+                  `,title:`Lay All Your Love On Me`,album:`ABBA-SuperTrouper`
+            },
+            {
+                src:'Youll be in My heart.mp3',lirik:`Youll be in My heart:
+                Come stop the crying, it′ll be alright
+Just take my hand, hold it tight
+I will protect you from all around you
+I will be here, don't you cry
+For one so small, you seem so strong
+My arms will hold you, keep you safe and warm
+This bond between us can′t be broken
+I will be here, don't you cry
+chorus
+'Cause you′ll be in my heart
+Yes, you′ll be in my heart
+From this day on, now and forevermore (oh)
+Yes, you'll be in my heart
+No matter what they say
+You′ll be here in my heart always
+verse
+Why can't they understand the way we feel?
+They just don′t trust what they can't explain
+I know we′re different, but deep inside us
+We're not that different at all (we're not that different at all)
+chorus
+And you′ll be in my heart (oh)
+Yes, you′ll be in my heart
+From this day on, now and forevermore (oh)
+bridge
+Don't listen to them, ′cause what do they know?
+We need each other to have and to hold
+They'll see in time, I know
+When destiny calls you, you must be strong
+I may not be with you, but you got to hold on
+They′ll see in time, I know
+Show them together
+chorus
+'Cause you′ll be in my heart
+Yes, you'll be in my heart
+From this day on, now and forevermore (oh)
+You'll be in my heart
+No matter what they say
+You′ll be here in my heart always
+outro
+Always
+Just look over your shoulder (I′ll be with you)
+Just look over your shoulder (I'll be there for you always)
+(Always) just look over your shoulder
+Just look over your shoulder
+I′ll be there always
+                `,title:`You'll be In My Heart`,album:`NIKI-NIKI`
+            },
+             {
+                src:'The Girl From Ipanema.mp3',lirik:`The Girl From Ipanema:
+               Tall and tan and young and lovely
+The girl from Ipanema goes walking
+And when she passes, each one she passes
+goes "A-a-a-h"
+When she walks she's like a samba
+When she walks, she's like a samba
+That swings so cool and sways so gentle
+That when she passes, each one she passes
+goes "A-a-a-h"
+Oh, but I watch her so sadly
+How can I tell her I love her
+Yes, I would give my heart gladly
+But each day as she walks to the sea
+She looks straight ahead, not at me
+Tall and tan and young and lovely
+The girl from Ipanema goes walking
+And when she passes, I smile, but she
+doesn't see. She just doesn't see
+No, she just doesn't
+                `,title:`The Girl From Ipanema`,album:`Antonio Carlos Jobim`
+            },{
+                src:'Cinta Kan Membawamu Kembali (Remastered 2022).mp3',lirik:` Cintakan Membawamu Kembali:
+Tiba saat mengerti
+Jerit suara hati
+Letih meski mencoba
+Menaklukkan
+Rasa yang ada
+Mohon tinggal sejenak
+Lupakanlah waktu
+Temani air mataku
+Teteskan lara
+Merajut asa
+Menjalin mimpi
+Endapkan sepi-sepi
+
+Cinta 'kan membawamu kembali di sini
+Menuai rindu, membasuh perih
+Bawa serta dirimu, dirimu yang dulu
+Mencintaiku apa adanya
+
+Saat dusta mengalir
+Jujurkanlah hati
+Genangkan batin jiwamu
+Genangkan cinta
+Seperti dulu
+Saat bersama
+Tak ada keraguan
+
+Cinta 'kan membawamu kembali di sini
+Menuai rindu, membasuh perih
+Bawa serta dirimu, dirimu yang dulu
+Mencintaiku apa adanya
+
+Cinta 'kan membawamu kembali di sini
+Menuai rindu, membasuh perih
+Bawa serta dirimu, dirimu yang dulu
+Mencintaiku apa adanya
+
+Cinta 'kan membawamu kembali di sini
+Menuai rindu, membasuh perih`,title:`Cintakan MembawaMu Kembali`,album:`DEWA 19`
+            },{
+                src:'Dewa - Separuh Nafas Official Video.mp3',lirik:`Separuh Nafas:
+                Separuh nafasku
+Terbang bersama dirimu
+Saat kau tinggalkanku
+Salahkanku
+Salahkah aku
+Bila aku bukanlah
+Seperti aku yang dahulu?
+Ada makna tergali dari sini
+Dari pertikaian yang terjadi
+Kau hancurkan diriku
+Bila kau tinggalkan aku
+Kau dewiku
+Kembalilah padaku
+Bawa separuh nafasku
+Kau dewiku
+Salahkah aku
+Bila aku bukanlah
+Seperti aku yang dahulu?
+Ada makna tergali dari sini
+Dari pertikaian yang terjadi
+Kau hancurkan diriku
+Bila kau tinggalkan aku
+Kau dewiku
+Kembalilah padaku
+Bawa separuh nafasku
+Kau dewiku
+Ada makna tergali dari sini
+Dari pertikaian yang terjadi
+Kau hancurkan diriku
+Bila kau tinggalkan aku
+(Jangan tinggalkan) Kau dewiku (oh, dewiku)
+Kembalilah padaku
+Bawa separuh nafasku
+(Kembalilah kau) Kau dewiku (oh, dewiku)
+Kau hancurkan diriku
+Bila kau tinggalkan aku
+(Jangan tinggalkan) Kau dewiku (oh, dewiku)
+Kembalilah padaku
+Bawa separuh nafasku
+(Kembalilah kau) Kau dewiku (oh, dewiku)`,title:`Separuh NafasKu`,album:`DEWA 19`
+            },{
+                src:'John Denver - Take Me Home Country Roads (Official Audio).mp3',lirik:`Country Road:
+Almost Heaven, West Virginia
+Blue Ridge Mountains, Shenandoah River
+Life is old there, older than the trees
+Younger than the mountains, growin' like a breeze
+Country roads, take me home
+To the place I belong
+West Virginia, mountain mama
+Take me home, country roads
+All my memories gather 'round her
+Miner's lady, stranger to blue water
+Dark and dusty, painted on the sky
+Misty taste of moonshine, teardrop in my eye
+Country roads, take me home
+To the place I belong
+West Virginia, mountain mama
+Take me home, country roads
+I hear her voice in the mornin' hour, she calls me
+The radio reminds me of my home far away
+Drivin' down the road, I get a feelin'
+That I should've been home yesterday, yesterday
+Country roads, take me home
+To the place I belong
+West Virginia, mountain mama
+Take me home, country roads
+Country roads, take me home
+To the place I belong
+West Virginia, mountain mama
+Take me home, country roads
+Take me home, (down) country roads
+Take me home, (down) country roads
+                `,title:`Country Road`,album:`John Denver`
+            },{
+                src:'Backstreet Boys - I Want It That Way.mp3',lirik:`I Want It That Way:
+You are my fire
+The one desire
+Believe when I say
+I want it that way
+
+When we are two worlds apart
+Can't reach to your heart
+When you say that I want it that way
+
+Tell me why
+Ain't nothing but a heartache
+Tell me why
+Ain't nothing but a mistake
+Tell me why
+I never wanna hear you say
+I want it that way
+
+Am I your fire
+Your one desire
+Yes I know
+It's too late
+But I want it that way
+
+Tell me why
+Ain't nothing but a heartache
+Tell me why
+Ain't nothing but a mistake
+Tell me why
+I never wanna hear you say
+I want it that way
+
+Now I can see that we're falling apart
+From the way that it used to be, yeah
+No matter the distance I want you to know
+That deep down inside of me
+
+You are my fire
+The one desire
+You are (You are)
+
+Don't wanna hear you say
+Ain't nothing but a heartache
+Ain't nothing but a mistake
+(Don't wanna hear you say)
+I never wanna hear you say
+(Oh yeah)
+I want it that way
+
+Tell me why
+Ain't nothing but a heartache
+Tell me why
+Ain't nothing but a mistake
+Tell me why
+I never wanna hear you say
+(Don't wanna hear you say)
+I want it that way
+
+Tell me why
+Ain't nothing but a heartache
+Ain't nothing but a mistake
+Tell me why
+I never wanna hear you say
+(Don't wanna hear you say)
+I want it that way
+
+Cause I want it that way..
+                `,title:`I Want it that way`,album:`BackStreet Boys`
+            },{
+                src:'Frank Sinatra - My Way (Lyrics).mp3',lirik:`My Way : 
+                And now, the end is near,
+And so I face the final curtain.
+My friends, I'll say it clear;
+I'll state my case of which I'm certain.
+
+I've lived a life that's full -
+I've travelled each and every highway.
+And more, much more than this,
+I did it my way.
+
+Regrets? I've had a few,
+But then again, too few to mention.
+I did what I had to do
+And saw it through without exemption.
+
+I planned each charted course -
+Each careful step along the byway,
+And more, much more than this,
+I did it my way.
+
+Yes, there were times, I'm sure you knew,
+When I bit off more than I could chew,
+But through it all, when there was doubt,
+I ate it up and spit it out.
+I faced it all and I stood tall
+And did it my way.
+
+I've loved, I've laughed and cried,
+I've had my fill - my share of losing.
+But now, as tears subside,
+I find it all so amusing.
+
+To think I did all that,
+And may I say, not in a shy way -
+Oh no. Oh no, not me.
+I did it my way.
+
+For what is a man? What has he got?
+If not himself - Then he has naught.
+To say the things he truly feels
+And not the words of one who kneels.
+The record shows I took the blows
+And did it my way.
+
+Yes, it was my way.
+                `,title:`My Way`,album:`Claude François & Jacques Revaux`
+            },{
+                src:'George Benson - Nothings Gonna Change My Love For You [Lyrics].mp3',lirik:`Nothing's Gonna Change My Love For You:
+                If I had to live my life without you near me
+The days would all be empty
+The nights would seem so long
+With you I see forever, oh, so clearly
+I might have been in love before
+But it never felt this strong
+Our dreams are young and we both know
+They'll take us where we want to go
+Hold me now, touch me now
+I don't want to live without you
+Nothing's gonna change my love for you
+You oughta know by now how much I love you
+One thing you can be sure of
+I'll never ask for more than your love
+Nothing's gonna change my love for you
+You oughta know by now how much I love you
+The world may change my whole life through
+But nothing's gonna change my love for you
+If the road ahead is not so easy
+Our love will lead the way for us
+Like a guiding star
+I'll be there for you if you should need me
+You don't have to change a thing
+I love you just the way you are
+So come with me and share the view
+I'll help you see forever too
+Hold me now, touch me now
+I don't want to live without you
+Nothing's gonna change my love for you
+You oughta know by now how much I love you
+One thing you can be sure of
+I'll never ask for more than your love
+Nothing's gonna change my love for you
+You oughta know by now how much I love you
+The world may change my whole life through
+But nothing's gonna change my love for you
+Nothing's gonna change my love for you
+You oughta know by now how much I love you
+One thing you can be sure of
+I'll never ask for more than your love
+Nothing's gonna change my love for you
+You oughta know by now how much I love you
+The world may change my whole life through
+But nothing's gonna change my love for you
+Nothing's gonna change my love for you
+You oughta know by now how much I love you
+One thing you can be sure of
+I'll never ask for more than your love
+Nothing's gonna change my love for you
+You oughta know by now how much I love you
+The world may change my whole life through
+But nothing's gonna change my love for you
+Nothing's gonna change my love for you
+                `,title:  `Nothing's Gonna change My love For You`,album:`Michael Masser dan Gerry Goffin-Glenn Medeiros`
+            },{
+                src:'One direction.mp3',lirik:`Hey, girl, I'm waiting on ya, I'm waiting on ya
+Come on, and let me sneak you out
+And have a celebration, a celebration
+The music up, the window's down
+Yeah, we'll be doing what we do
+Just pretending that we're cool and we know it too
+Yeah, we'll keep doing what we do
+Just pretending that we're cool, so tonight
+Let's go crazy, crazy, crazy 'til we see the sun
+I know we only met, but let's pretend it's love
+And never, never, never stop for anyone
+Tonight, let's get some
+And live while we're young
+And live while we're young (oh-oh-oh-oh-oh-oh-oh)
+Tonight, let's get some
+And live while we're young
+Hey, girl, it's now or never, it's now or never
+Don't overthink, just let it go
+And if we get together, yeah, get together
+Don't let the pictures leave your phone, oh
+Yeah, we'll be doing what we do
+Just pretending that we're cool, so tonight
+Let's go crazy, crazy, crazy 'til we see the sun
+I know we only met, but let's pretend it's love
+And never, never, never stop for anyone
+Tonight, let's get some
+And live while we're young
+Wanna live while we're young (oh-oh-oh-oh-oh-oh-oh)
+Tonight, let's get some
+And live while we're young
+And, girl, you and I
+We're 'bout to make some memories tonight (oh-oh-oh-oh-oh-oh-oh)
+I wanna live while we're young (oh-oh-oh-oh-oh-oh-oh)
+We want to live while we're young
+Let's go crazy, crazy, crazy 'til we see the sun
+I know we only met, but let's pretend it's love
+And never, never, never stop for anyone
+Tonight, let's get some
+And live while we're young
+Crazy, crazy, crazy 'til we see the sun
+I know we only met, but let's pretend it's love
+And never, never, never stop for anyone
+Tonight, let's get some
+And live while we're young
+Come on, young (wanna live, wanna live, wanna live)
+Wanna live while we're young
+(Wanna live, wanna live, wanna live while we're young)
+Tonight, let's get some
+And live while we're young`,title:"Live while we're young",album:`One direction`
+            },{
+                 src:'Tompi - Menghujam Jantungku (Official Music Video).mp3',title:`Menghujam Jantungku`,album:`Tompi`,lirik:`Segenap hatiku selalu memujamu
+Seluruh jiwa ku persembahkan untukmu
+Sepenuh cintaku merindukan dirimu
+Seutuh gejolak membakar hatiku
+Seperti cahaya hadirmu di duniaku
+Seperti ribuan bintang yang menghujam jantungku
+Kau membuatku merasakan indahnya jatuh cinta
+Indahnya di cintai saat kau jadi milikku
+Oh tak 'kan kulepaskan dirimu oh cintaku
+Teruslah kau bersemi di dalam lubuk hatiku
+Seperti cahaya hadirmu di duniaku
+Seperti ribuan bintang yang menghujam jantungku Ohh
+Kau membuatku merasakan indahnya jatuh cinta
+Indahnya di cintai saat kau jadi milikku
+Oh tak 'kan kulepaskan dirimu oh cintaku
+Teruslah kau bersemi di dalam lubuk hatiku
+Kau membuatku merasa indahnya jatuh cinta
+Indahnya di cintai saat kau jadi milikku
+Oh tak 'kan kulepaskan dirimu oh cintaku
+Teruslah kau bersemi di dalam lubuk hatiku
+Kau membuatku merasa indahnya jatuh cinta
+Indahnya di cintai saat kau jadi milikku
+Saat kau jadi milikku`
+            },]
+
+        let laguindex = 0;
+        function loadSong(index){
+            lagunindex = index;
+            audioPlayer.pause();
+            audioPlayer.src = lagu[index].src;
+            audioPlayer.load();
+            audioPlayer.play();
+            lirik.innerText = lagu[index].lirik;
+            title.innerText=lagu[index].title;
+            album.innerText = lagu[index].album;
+        }
+
+        function pauseSong(){
+if(audioPlayer.paused){
+    audioPlayer.play();
+}else{
+     audioPlayer.pause();
+}
+        }
+        
+        function stopSong(){
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        }
+           function nextSong(){
+          laguindex = ( laguindex+ 1 + lagu.length) % lagu.length;
+          loadSong(laguindex);
+        }
+function prevSong(){
+    laguindex = (laguindex- 1 + lagu.length) % lagu.length;
+    loadSong(laguindex)
+}
+function ulangiSong(){
+    // kalo gak bisa ganti ulangiSong menjadi Ulangi
+    isRepeat = !isRepeat ; 
+    btnUlangi.innerText = isRepeat ? "Repeat On" : "Repeat : Off";
+}
+audioPlayer.addEventListener('ended', function(){
+    if(isRepeat){
+        audioPlayer.currentTime = 0;
+        audioPlayer.play();
+    }else{
+        nextSong();
+    }
+})
+function pilihlagu(index){
+loadSong(index);
+}
+
+
+     </script>
+</body>
+</html>

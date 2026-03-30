@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.utama{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.kiri{
+    width: 28%;
+    height: 100vh;
+    background-image: linear-gradient(black,green);
+    box-shadow: 0px 0px 0px 20px;
+ 
+}
+
+.kanan{
+    width: 20%;
+    height: 100vh;
+    background-image: linear-gradient(black,green);
+     overflow: scroll;
+}
+.tengah{
+    width: 55%;
+    height: 100vh;
+    background-image: linear-gradient(green,black);
+}
+
+.atas{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items:  end;
+}
+.bks-atas{
+    width: 70%;
+    height: 13vh;
+    font-size: 20px;
+}
+.tengah2{
+    width: 100%;
+    height: 80vh;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+.atas2{
+    width: 85%;
+    height: 78vh;
+}
+.kotak{
+    width: 100%;
+    height: 25vh;
+    background-color: orange;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.bulat{
+    width: 23%;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: purple;
+}
+.navbar{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bks-navbar{
+    width: 85%;
+    height: 10vh;
+       display: flex;
+    justify-content: space-between;
+}
+.kiri2{
+width: 50%;
+height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.bks-kiri2{
+    width: 85%;
+    height: 5vh;
+}
+.kanan2{
+width: 50%;
+height: 5vh;
+  display: flex;
+    justify-content: end;
+}
+.kiri2 input{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 30px;
+
+    
+}
+.bulat2{
+    width: 13%;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: orange;
+    margin-right: 3px;
+}
+.kotak2{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kiri3{
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.atastas{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+}
+
+.tastostas{
+    width: 90%;
+    height: 15vh;
+    
+}
+.kotak3{
+    width: 85%;
+    height: 30vh;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.kasitengah{
+    width: 95%;
+    height: 30vh;
+    display: flex;justify-content: space-between;align-items: center;
+}
+.kanan3{
+    width: 45%;
+    height: 30vh;
+}
+
+.table{
+    width: 100%;
+    height: 40vh;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bks-table{
+    width: 90%;
+    height: 35vh;
+
+}
+.bks-table th,.bks-table td,.bks-table tr{
+    border: 2px solid grey;
+    text-align: center;
+ width: 20%;
+ border-collapse: collapse;
+}
+.table::-webkit-scrollbar{
+ display: none;
+}
+
+.bawah{
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.bks-bawah{
+    width: 85%;
+    height: 7vh;
+          display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bks-bawah button{
+    padding: 4px;
+    border-radius: 10px;
+    width: 15%;
+gap: 3%;
+}
+.bks-bawah button{
+cursor: pointer;
+}
+.kanan::-webkit-scrollbar{
+    display: none;
+}
